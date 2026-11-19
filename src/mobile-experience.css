@@ -1,0 +1,98 @@
+/* Keep the free hero composition; make the next step clear below its canvas. */
+.mobile-project-intro,.mobile-work-action,.project-invitation-copy-mobile{display:none}
+#cenik .pricing-quick-start{display:none}
+.enquiry-required-note{font-size:13px;line-height:1.6;color:#536248}
+#contact-form:focus{outline:none}
+
+@media(max-width:1023px){
+  /* Use one anchor offset, rather than adding padding to every section margin. */
+  html{scroll-padding-block-start:0}
+  .home-theme :is(section[id],.section-alias,#contact-form){scroll-margin-block-start:84px}
+  .home-theme:has(#contact-form :is(input,textarea,select):focus) .growe-mobile-dock{visibility:hidden;pointer-events:none}
+}
+
+@media(max-width:767px){
+  .project-invitation :is(.project-invitation-copy-full,.project-invitation-copy-compact){display:none}
+  .project-invitation .project-invitation-copy-mobile{display:inline}
+  .mobile-project-intro{display:flex;flex-direction:column;align-items:center;gap:16px;padding:16px 24px 40px;text-align:center}
+  .mobile-project-intro h2{max-width:20ch;margin:0;font-size:32px;line-height:1.15;text-wrap:balance}
+  .mobile-project-intro p{max-width:36ch;margin:0;font-size:16px;line-height:1.65;color:#53604e}
+  .mobile-project-intro .feature-primary{width:100%;max-width:360px;min-height:50px;margin-top:6px;font-size:16px}
+  .mobile-budget-link{display:inline-flex;align-items:center;justify-content:center;min-height:44px;color:#40572e;font-size:15px;text-decoration:underline;text-underline-offset:4px}
+  .mobile-project-intro small{max-width:32ch;color:#59674d;font-size:13px;line-height:1.5}
+
+  /* Keep every real client logo, with matching bounds for both ink layers. */
+  #reference{padding-block:32px}
+  #reference .client-names{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 16px;margin:24px 0 0}
+  #reference .client-names li{min-height:64px}
+  #reference .client-mark{width:100%;max-width:130px}
+  #reference .client-logo{width:100%;max-width:100%;height:58px}
+  #reference .client-mark--chata{max-width:58px}
+
+  .why-statement{gap:22px;padding:26px 22px}
+  .why-quote-mark{width:30px;height:23px;margin:10px 0 18px}
+  .why-statement p,.why-contact-panel p{font-size:16px}
+  .why-statement-footer a{min-height:44px;font-size:12px}
+  .why-panel-label{font-size:11px;letter-spacing:.07em}
+  .why-services a{font-size:13px}
+  .why-contact-panel small{font-size:13px}
+  .why-metrics dd{font-size:13px}
+  .why-metrics small{font-size:11px}
+
+  .mobile-work-action{display:flex;justify-content:center;padding:24px 24px 0}
+  .mobile-work-action .feature-primary{width:100%;max-width:360px;min-height:48px;font-size:16px}
+  #prace #projects-track .project-info :is(p,span){font-size:12px}
+  #prace .projects-controls .projects-dots{gap:0}
+  .projects-dots button{width:28px}
+  .testimonial-dots button{width:40px}
+  #ohlasy .testimonial-slide figcaption strong{font-size:14px}
+  #ohlasy .testimonial-slide figcaption small{font-size:13px}
+
+  #postup .process-steps>li{gap:10px 12px;padding-block:22px;min-height:0}
+  .process-result{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+  .process-result>span{font-size:12px}
+  .process-result p{margin:0;font-size:14px}
+
+  #cenik .pricing-heading>p{font-size:16px;line-height:1.6}
+  .pricing-main-price>p{font-size:11px}
+  .pricing-summary>p{font-size:16px;line-height:1.55}
+  .pricing-highlight{scroll-margin-block-start:84px}
+  .pricing-confirm{font-size:13px}
+  #cenik .pricing-quick-start{display:flex;width:100%;min-height:48px;grid-column:1/-1;font-size:16px;background:#24301e;color:#fff}
+  #cenik .pricing-quick-start:hover{background:#344c27}
+  .pricing-options button{font-size:14px;min-height:76px;padding:10px 8px}
+  .pricing-options small{font-size:12px}
+  .pricing-includes li{font-size:15px}
+  .pricing-common>span,.pricing-action>p{font-size:13px}
+  #cenik .pricing-start{font-size:16px}
+
+  #konzultace .contact-pet{width:64px;height:64px;margin-bottom:16px}
+  .contact-form-shell{margin-top:28px;padding:24px 18px}
+  #contact-form :is(input:not([tabindex="-1"]),select){min-height:50px}
+  #contact-form textarea{min-height:140px;scroll-margin-block:100px}
+  #contact-form :is(input,select,textarea){font-size:16px;scroll-margin-block-start:100px}
+  #contact-form label{font-size:14px;letter-spacing:.015em;text-transform:none;color:#3f4f34}
+  #contact-form input::placeholder,#contact-form textarea::placeholder{color:#697361;opacity:1}
+  #service-hint{color:#536248;font-size:14px}
+  #contact-form button[type="submit"]{min-height:52px;font-size:16px}
+  #contact-form a,.direct-contact a,.team-contact>a{display:inline-flex;align-items:center;min-height:44px}
+  .direct-contact{display:flex;align-items:center;justify-content:center;gap:0 12px;flex-wrap:wrap;font-size:14px}
+  .team-contact>a{margin-top:4px;font-size:16px}
+  .team-contact .feature-primary{width:100%}
+  .growe-dialog .dialog-close{position:sticky;top:12px;z-index:5;box-shadow:0 4px 16px #24301e18}
+  .case-actions>a{display:inline-flex;align-items:center;min-height:44px}
+  .growe-header .growe-brand>a{display:inline-flex;align-items:center;min-height:44px}
+  .home-theme footer nav a,.home-theme footer>div a[href^="mailto:"],.home-theme footer>div a[href^="tel:"]{min-height:44px;align-items:center}
+  .home-theme footer a[href^="tel:"]{display:flex}
+}
+
+/* Optional callback details travel with the existing enquiry payload. */
+#contact-form .contact-phone{grid-column:1/-1}
+#contact-form .field-optional{font-size:12px;letter-spacing:0;text-transform:none;font-weight:400;color:#5b6951}
+#phone-hint{margin:8px 0 0;font-size:13px;line-height:1.5;color:#536248}
+#contact-form .enquiry-privacy { font-size: 13px; line-height: 1.65; color: #536248; }
+#contact-form .enquiry-privacy a { color: #2f3a1d; text-decoration: underline; text-underline-offset: .2em; }
+.footer-operator { margin: 16px 0 8px; line-height: 1.7; }
+.footer-legal { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 24px; }
+.footer-legal a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: underline; text-underline-offset: .2em; }
+@media (min-width: 640px) { .footer-legal { justify-content: flex-start; } }

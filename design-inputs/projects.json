@@ -1,0 +1,75 @@
+[
+  {
+    "name": "Begin Reselling",
+    "category": "B2B e-shop na míru",
+    "year": "2024",
+    "image": "/assets/begin-reselling.jpg",
+    "url": "https://www.beginreselling.com/",
+    "wip": false
+  },
+  {
+    "name": "Labara",
+    "category": "Web design",
+    "year": "2026",
+    "image": "/assets/labara-2026.jpg",
+    "url": "https://labara.cz",
+    "wip": false,
+    "previewSource": "https://joomla.website21.dev/labara/index.php/cs"
+  },
+  {
+    "name": "LEDprofes a.s.",
+    "category": "Web + správa sociálních sítí",
+    "year": "2024",
+    "image": "/assets/ledprofes-a-s.jpg",
+    "url": "https://ledprofes.cz",
+    "wip": false
+  },
+  {
+    "name": "U Vousatýho pulitru",
+    "category": "Nasazení AI webu",
+    "year": "2026",
+    "image": "/assets/u-vousatyho-pulitru.jpg",
+    "url": "https://uvousatyhopulitru.cz",
+    "wip": false
+  },
+  {
+    "name": "Solar Inspekce",
+    "category": "Webová aplikace",
+    "year": "2025",
+    "image": "/assets/solar-inspekce.jpg",
+    "url": null,
+    "wip": false
+  },
+  {
+    "name": "Revispol",
+    "category": "Web design",
+    "year": "2025",
+    "image": "/assets/revispol.jpg",
+    "url": "https://revispol.cz",
+    "wip": false
+  },
+  {
+    "name": "AAALED E-shop",
+    "category": "E-commerce · ve výrobě",
+    "year": "2025",
+    "image": "/assets/aaaled-e-shop.jpg",
+    "url": "https://aaaled.cz",
+    "wip": true
+  },
+  {
+    "name": "Chata u Dědka",
+    "category": "Web design",
+    "year": "2024",
+    "image": "/assets/chata-u-dedka.jpg",
+    "url": "https://chataudedka.cz",
+    "wip": false
+  },
+  {
+    "name": "Viral Vibes",
+    "category": "Web design",
+    "year": "2024",
+    "image": "/assets/viral-vibes.jpg",
+    "url": "https://viralvibes.cz",
+    "wip": false
+  }
+]

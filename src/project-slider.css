@@ -1,0 +1,53 @@
+/* Centered project showcase, matching the supplied reference composition. */
+#prace>div{max-width:none;padding-inline:0}
+#prace>div>.text-center{max-width:1024px;margin-inline:auto;padding-inline:24px}
+#prace #projects-track[data-enhanced]{display:block;overflow:hidden;position:relative;padding:38px 0 46px;margin:40px 0 0;border-radius:0;touch-action:pan-y;scroll-snap-type:none;cursor:grab;user-select:none}
+#prace #projects-track[data-dragging]{cursor:grabbing}
+.projects-rail{display:flex;align-items:center;gap:20px;position:relative;will-change:transform;transition:transform .72s cubic-bezier(.22,.9,.24,1)}
+.project-slide{--project-accent:#739d3f;position:relative;flex:0 0 min(53vw,1000px);min-width:0;padding:10px;border-radius:24px;background:#ffffff70;transform:scale(.86);opacity:.9;filter:saturate(.85);transition:transform .72s cubic-bezier(.22,.9,.24,1),opacity .5s,filter .5s;box-shadow:0 26px 48px -30px #14202b4d}
+.project-slide.is-active{transform:scale(1);opacity:1;filter:none;background:#ffffffa0}
+.project-slide::before{content:"";position:absolute;inset:-2px;border:2px solid var(--project-accent);border-radius:26px;opacity:0;pointer-events:none;z-index:2;transition:opacity .35s}
+.project-slide.is-active::before{opacity:1}
+.project-selection-label{position:absolute;top:-26px;left:0;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:11px;font-weight:600;line-height:20px;padding:1px 9px;border-radius:5px 5px 5px 1px;background:var(--project-accent);color:#fff;opacity:0;transition:opacity .35s}
+.project-handle{position:absolute;width:9px;height:9px;border:2px solid var(--project-accent);border-radius:2px;background:#fff;z-index:3;opacity:0;transition:opacity .35s;pointer-events:none}
+.project-handle-0{top:-6px;left:-6px}.project-handle-1{top:-6px;right:-6px}.project-handle-2{bottom:-6px;left:-6px}.project-handle-3{bottom:-6px;right:-6px}
+.project-slide.is-active :is(.project-handle,.project-selection-label){opacity:1}
+#prace #projects-track .project-slide .project-card{position:relative;display:block;width:100%;padding:10px 10px 0;border:0;border-radius:16px;background:#fff;text-align:left;box-shadow:none;transform:none;overflow:hidden;color:#2f3a1d}
+#prace #projects-track .project-slide .project-card:hover{transform:none;box-shadow:none}
+#prace #projects-track .project-window{border:0;border-radius:10px;background:#f0f3ec}
+#prace #projects-track .project-window-bar{display:none}
+#prace #projects-track .project-viewport{aspect-ratio:23/16}
+#prace #projects-track .project-viewport img{object-position:50% 0;transition:none}
+#prace #projects-track .project-info{position:static;display:flex;align-items:center;flex-wrap:wrap;gap:8px 12px;padding:18px 8px 20px}
+#prace #projects-track h3{display:flex;align-items:center;gap:9px;font-size:clamp(19px,1.55vw,27px);line-height:1.2;letter-spacing:-.025em;padding:0;margin:0 auto 0 0}
+#prace #projects-track h3::before{content:"";width:7px;height:7px;border-radius:2px;background:var(--project-accent);flex:none}
+#prace #projects-track .project-info :is(p,span){margin:0;padding:5px 9px;border:1px solid #e2e7dc;border-radius:20px;background:#f6f8f2;color:#56604b;font-size:10px;line-height:1.25}
+#prace #projects-track .project-slide.is-active .project-info p{color:#4a6b29;border-color:#c7dbad;background:#f0f7e6}
+#prace #projects-track .project-detail-link{display:none}
+#prace #projects-track .project-arrow{position:absolute;top:28px;right:28px;width:40px;height:40px;padding:11px;border:1px solid #ffffffb3;border-radius:50%;background:#ffffffb3;color:#263c22;backdrop-filter:blur(12px)}
+#prace #projects-track .project-slide:not(.is-active) .project-arrow{opacity:0}
+#prace #projects-track .booking-mockup{height:auto;aspect-ratio:23/16}
+#prace .projects-controls{display:flex;flex-direction:column;gap:8px;margin:0;padding-inline:16px}
+#prace .projects-controls>div{display:flex;justify-content:center;gap:12px}
+#prace .projects-controls .projects-dots{gap:4px;flex-wrap:wrap;max-width:100%}
+.projects-dots button{display:grid;place-items:center;width:30px;height:44px;padding:0;border:0;background:transparent;cursor:pointer}
+.projects-dots button::before{content:"";width:24px;height:6px;border-radius:6px;background:#d7dfcf;transition:background .25s,width .25s}
+.projects-dots button[aria-current]::before{width:30px;background:#739d3f}
+#prace .gallery-arrow{display:grid;place-items:center;width:48px;height:48px;border:0;border-radius:15px;background:#fff;box-shadow:0 8px 18px -12px #14202b80;color:#2f3a1d}
+#prace .gallery-arrow svg{width:20px;height:20px}
+#prace .gallery-arrow:hover{background:#2f3a1d;color:#fff;transform:translateY(-2px)}
+@media(max-width:900px){.project-slide{flex-basis:78vw}}
+@media(max-width:600px){
+  .project-slide{flex-basis:84vw;padding:7px;border-radius:20px}
+  #prace #projects-track[data-enhanced]{margin-top:28px;padding-bottom:26px}
+  #prace #projects-track .project-slide .project-card{padding:7px 7px 0;border-radius:14px}
+  #prace #projects-track .project-info{padding:16px 6px;gap:8px}
+  #prace #projects-track h3{flex-basis:100%;font-size:21px}
+  #prace #projects-track .project-info :is(p,span){font-size:10px}
+  #prace #projects-track .project-arrow{top:20px;right:20px;width:36px;height:36px;padding:10px}
+  #prace .projects-controls .projects-dots{gap:2px}
+  .projects-dots button{width:26px}
+  .projects-dots button::before{width:19px}
+  .projects-dots button[aria-current]::before{width:25px}
+}
+@media(prefers-reduced-motion:reduce){.projects-rail,.project-slide,.project-slide::before,.project-handle,.project-selection-label,.projects-dots button::before{transition:none}}

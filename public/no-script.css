@@ -1,0 +1,15 @@
+/* Text, projects and contact remain available without JavaScript. */
+*{animation:none!important;scroll-behavior:auto!important}
+.animate-fade-up{opacity:1!important;filter:none!important;transform:none!important}
+#postup>div:not(.nojs-process){display:none!important}.nojs-process{display:block!important;max-width:900px;margin:auto;padding:48px 24px}.nojs-process h2{font-size:32px;font-weight:600}.nojs-process h3{font-size:22px;font-weight:600}.nojs-process ol{display:grid;gap:24px;margin-top:24px;list-style:none}.nojs-process p{margin-top:8px;line-height:1.6}
+[hidden]{display:block!important}.motion-panel{display:block!important;opacity:1!important}
+#contact-form,.projects-controls,.motion-toggle,.growe-mascot,.contact-pet{display:none!important}
+#projects-track{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr))!important;overflow:visible!important}
+#services-track,#reseni>div:nth-child(2){display:none!important}.nojs-services{display:flex;gap:12px;flex-wrap:wrap;max-width:1000px;margin:32px auto;list-style:none}.nojs-services a{display:block;padding:16px 24px;border:1px solid #d8e1cc;border-radius:16px;background:#f3f9e9}
+
+.guide-launch,.service-enquire,.topic-mascot,.pricing-row button{display:none!important}.nojs-project-links{max-width:1000px;margin:24px auto;padding:0 16px}.nojs-project-links a{text-decoration:underline}
+
+/* Every project budget remains readable without the selector script. */
+.pricing-switcher{display:none!important}
+.pricing-start,.hero-pause,.hero-guide-toggle,.testimonial-controls{display:none!important}
+.pricing-board [data-pricing-panel][hidden]{display:block!important}

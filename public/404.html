@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="robots" content="noindex,follow">
+  <meta name="theme-color" content="#fafbf7">
+  <title>Stránka nenalezena — Growe</title>
+  <link rel="icon" href="/favicon.ico?v=3" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/icons/growe-enter.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/growe-enter-180.png">
+  <link rel="stylesheet" href="/404.css">
+</head>
+<body>
+  <header>
+    <a class="brand" data-home href="/" aria-label="Growe – úvod"><img src="/assets/mascot/growe-enter.webp" width="48" height="48" alt=""><span>growe<sup>TM</sup></span></a>
+    <span class="error-code" data-i18n="code">Chyba 404</span>
+  </header>
+  <main>
+    <div class="scene" aria-hidden="true">
+      <div class="scene-grid"></div>
+      <div class="number"><span>4</span><img src="/assets/mascot/growe-enter-sad.webp" width="384" height="384" alt=""><span>4</span></div>
+      <div class="empty-folder"><div class="folder-tab"></div><div class="folder-front"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 7h15l8 8v26H13zM28 7v9h8M19 25l11 8m0-8-11 8"/></svg><span data-i18n="folder">Tahle složka je prázdná.</span><i></i></div></div>
+      <span class="cursor"><svg viewBox="0 0 24 28" fill="currentColor"><path d="m2 2 20 12-11 2-5 10Z"/></svg><span data-i18n="cursor">Zkusíme to jinudy</span></span>
+    </div>
+    <div class="copy">
+      <h1 data-i18n="title">Tuhle stránku<br>jsme nenašli.</h1>
+      <p data-i18n="description">Možná se přestěhovala. Možná je v odkazu překlep. Náš web ale najdete hned za rohem.</p>
+      <div class="actions"><a class="primary" data-home href="/"><span data-i18n="home">Zpět na úvod</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 5v9H5m5-5-5 5 5 5"/></svg></a><a class="secondary" data-work href="/#prace" data-i18n="work">Prohlédnout naši práci</a></div>
+      <p class="help"><span data-i18n="help">Hledáte něco konkrétního?</span> <a href="mailto:info@growe.cz">info@growe.cz</a></p>
+    </div>
+  </main>
+  <footer><span data-i18n="studio">Digitální studio · České Budějovice</span><a data-contact href="/#konzultace" data-i18n="contact">Pojďme probrat váš nápad</a><nav class="error-legal" aria-label="Právní informace"><a href="/ochrana-osobnich-udaju/" data-legal="privacy">Ochrana osobních údajů</a><a href="/cookies/" data-legal="cookies">Cookies</a><a href="/provozovatel/" data-legal="operator">Provozovatel webu</a></nav></footer>
+  <script>
+    const english=location.pathname.startsWith('/en/')||new URLSearchParams(location.search).get('lang')==='en';
+    if(english){
+      document.documentElement.lang='en';document.title='Page not found — Growe';
+      const copy={code:'Error 404',folder:'This folder is empty.',cursor:'Let’s try another way',title:'We couldn’t find<br>this page.',description:'It may have moved, or there may be a typo in the link. Our website is just around the corner.',home:'Back to home',work:'Explore our work',help:'Looking for something specific?',studio:'Digital studio · České Budějovice',contact:'Let’s discuss your idea'};
+      document.querySelectorAll('[data-i18n]').forEach(el=>{if(el.dataset.i18n==='title')el.innerHTML=copy.title;else el.textContent=copy[el.dataset.i18n]});
+      document.querySelectorAll('[data-home]').forEach(el=>el.href='/en/');document.querySelector('.brand').setAttribute('aria-label','Growe home');
+      document.querySelector('[data-work]').href='/en/#prace';document.querySelector('[data-contact]').href='/en/#konzultace';
+      const legal={privacy:['/en/privacy/','Privacy policy'],cookies:['/en/cookies/','Cookies'],operator:['/en/legal-notice/','Legal notice']};
+      document.querySelector('.error-legal').setAttribute('aria-label','Legal information');
+      document.querySelectorAll('[data-legal]').forEach(el=>{const [href,label]=legal[el.dataset.legal];el.href=href;el.textContent=label});
+    }
+  </script>
+</body>
+</html>

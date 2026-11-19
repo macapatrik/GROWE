@@ -1,0 +1,42 @@
+{
+  "approved": false,
+  "status": "User requested a proposed price list for later review. Not a confirmed final tariff.",
+  "taxNote": null,
+  "services": [
+    {
+      "name": "Jednoduchý web",
+      "priceFrom": 8000,
+      "typicalTime": "3–7 pracovních dnů",
+      "service": "Weby na míru",
+      "scope": "Jedna stránka, dodané texty a fotografie."
+    },
+    {
+      "name": "Weby na míru",
+      "priceFrom": 29000,
+      "typicalTime": "3–6 týdnů"
+    },
+    {
+      "name": "E-shopy",
+      "priceFrom": 49000,
+      "typicalTime": "4–8 týdnů"
+    },
+    {
+      "name": "Grafika a branding",
+      "priceFrom": 15000,
+      "typicalTime": "2–4 týdny"
+    },
+    {
+      "name": "Webové aplikace",
+      "priceFrom": 69000,
+      "typicalTime": "6–12 týdnů"
+    },
+    {
+      "name": "Nasazení vašeho webu",
+      "priceFrom": 3000,
+      "typicalTime": "1–3 pracovní dny",
+      "service": "Nasazení vašeho webu",
+      "scope": "Nasazení zákazníkem připraveného webu podle použitelnosti podkladů.",
+      "status": "Proposed deployment price; user has not specified the amount."
+    }
+  ]
+}

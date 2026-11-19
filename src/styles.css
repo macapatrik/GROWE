@@ -1,0 +1,143 @@
+html{scroll-behavior:smooth}body{margin:0;background:#fafafa}button,a,input{-webkit-tap-highlight-color:transparent}[hidden]{display:none!important}.growe-logo{font-family:"GC Matrix Vol. 2","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:34px;font-weight:600;letter-spacing:-2px;line-height:24px;color:#080b12;display:inline-block}.nimbus-nav{pointer-events:auto!important}.client-names{display:grid;grid-template-columns:repeat(5,1fr);gap:32px 24px;align-items:center;list-style:none;margin:40px 0 24px;padding:0;text-align:center}.client-names li{font-size:18px;font-weight:650;letter-spacing:-.5px;color:#52545a}.project-grid,.quote-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:56px}.project-card,.quote-card{display:block;overflow:hidden;background:var(--card);border:1px solid var(--border);border-radius:20px;box-shadow:0 1px 2px #00000010}.project-card{transition:transform .3s,box-shadow .3s}.project-card:hover{transform:translateY(-5px);box-shadow:0 14px 35px #1c253412}.project-card img{width:100%;height:auto;aspect-ratio:1.6;object-fit:cover;display:block;border-bottom:1px solid var(--border)}.project-info{padding:24px;position:relative}.project-info h3{font-size:22px;font-weight:600;letter-spacing:-.5px;line-height:1.2;margin:0 0 9px}.project-info p{font-size:14px;color:var(--muted-foreground);margin:0 0 12px}.project-info>span{font-size:12px;color:var(--muted-foreground)}.project-card[href] .project-info:after{content:'↗';font-size:23px;position:absolute;right:24px;top:22px}.quote-card{padding:28px;margin:0}.quote-card blockquote{margin:0;font-size:16px;line-height:1.65;color:var(--muted-foreground)}.quote-card figcaption{margin-top:24px;font-size:14px;font-weight:600}.quote-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.studio-visual{width:100%;height:100%;object-fit:cover;border-radius:inherit}.form-notice{font-size:12px;line-height:1.6;color:var(--muted-foreground);margin-top:20px}.audience-panel li{display:inline-flex;align-items:center;gap:8px}.question-bubble{border-radius:16px 16px 16px 5px;background:white;box-shadow:0 1px 3px #0002;padding:10px 16px;line-height:1.5}.question-bubble+svg{flex-shrink:0;width:16px;height:16px}#spoluprace button[aria-expanded=true] .question-bubble{background:var(--foreground);color:var(--background)}#timeline-track{will-change:transform}#reseni .gf-art{object-fit:cover}#reseni .gf-hit:focus-visible{outline:3px solid var(--home-gold);outline-offset:-6px}#services-track{touch-action:pan-x pan-y}#prace{scroll-margin-top:110px}
+@media(max-width:767px){.growe-logo{font-size:28px;letter-spacing:-1.6px}.client-names{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 16px}.client-names li{font-size:16px}.project-grid,.quote-grid{grid-template-columns:1fr;gap:18px;margin-top:32px}.project-info{padding:20px}.quote-card{padding:24px}footer{padding-bottom:100px!important}.form-notice{font-size:13px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}#postup>div{height:auto}#postup .sticky{position:relative;height:auto;overflow:visible}#timeline-track{transform:none!important;width:100%;height:auto;flex-direction:column}#timeline-track>div{width:100%;height:auto}#postup ol{flex-direction:column;gap:24px}#postup ol li{width:100%;padding:20px}#postup .st-line,#postup .st-stem,#postup .st-dot{display:none}}
+.project-card[href] .project-info:after{content:none}.project-arrow{width:20px;height:20px;position:absolute;right:24px;top:24px}
+
+/* Warm Lime + Olive Ink */
+
+/* Sirsi obsah na velkych displejich: sekcni kontejnery na sirku hlavicky (1280px),
+   vnitrni max-w-2xl pro delku radku textu zustava bez zmeny */
+@media (min-width:1024px){
+section>.max-w-3xl{max-width:1024px}
+section>.max-w-5xl,section>.max-w-6xl,section>.lg\:max-w-5xl,footer>.max-w-6xl{max-width:1280px}
+}
+
+/* Optical sizing compensates for each mark's proportions and built-in whitespace. */
+.client-names{display:flex;flex-wrap:wrap;justify-content:center;gap:32px 24px}
+.client-names li{flex:0 0 calc((100% - 96px)/5);min-width:0;min-height:96px;display:flex;align-items:center;justify-content:center}
+.client-logo{display:block;width:180px;height:88px;max-width:100%;object-fit:contain;filter:none;opacity:1}
+.client-logo--chata{width:88px;height:88px}
+.client-logo[src$="solar-inspekce.svg"]{width:164px}
+.client-logo[src$="aaaled.svg"]{width:100px;height:64px}
+.client-logo[src$="viral-vibes-wordmark.png"]{width:200px;height:88px}
+.client-logo[src$="labara.png"]{width:164px}
+@media(max-width:767px){.client-names{gap:24px 16px}.client-names li{flex-basis:calc((100% - 16px)/2)}.client-logo{max-width:min(100%,170px)}}
+
+/* The wordmark stays a home link; its furry companion is a separate button. */
+.growe-brand{display:flex;align-items:center;gap:5px;flex-shrink:0;pointer-events:auto}
+.growe-mascot{position:relative;display:grid;place-items:center;width:56px;height:56px;padding:0;border:0;border-radius:16px;background:transparent;cursor:pointer;touch-action:manipulation}
+.growe-mascot img{position:relative;display:block;width:100%;height:100%;object-fit:contain;transform-origin:50% 90%;user-select:none}
+.growe-mascot-shadow{position:absolute;bottom:3px;left:22%;width:56%;height:5px;border-radius:50%;background:#2f3a1d24;filter:blur(2px)}
+.growe-mascot:focus-visible{outline:2px solid #2f3a1d;outline-offset:3px}
+.growe-mascot[data-pointer-focus]:focus{outline:none}
+.growe-mascot.is-jumping img{animation:growe-mascot-jump 720ms both;pointer-events:none}
+.growe-mascot.is-jumping .growe-mascot-shadow{animation:growe-mascot-shadow 720ms both}
+@keyframes growe-mascot-jump{
+  0%,100%{transform:translateY(0) scale(1)}
+  20%{transform:translateY(1px) scale(1.05,.91);animation-timing-function:cubic-bezier(.2,.75,.35,1)}
+  48%{transform:translateY(-9px) scale(1);animation-timing-function:cubic-bezier(.65,0,.85,.4)}
+  76%{transform:translateY(1px) scale(1.04,.94);animation-timing-function:ease-out}
+}
+@keyframes growe-mascot-shadow{0%,100%{transform:scale(1);opacity:1}20%,76%{transform:scale(1.06);opacity:1}48%{transform:scale(.8);opacity:.55}}
+@media(max-width:767px){.growe-mascot{width:48px;height:48px}.growe-brand{gap:3px}}
+@media(min-width:1024px) and (max-width:1199px){.growe-brand .growe-logo{font-size:28px}.growe-mascot{width:44px;height:48px}}
+@media(prefers-reduced-motion:reduce){.growe-mascot.is-jumping img{animation:growe-mascot-calm 300ms!important}.growe-mascot.is-jumping .growe-mascot-shadow{animation:none!important}}
+@keyframes growe-mascot-calm{50%{opacity:.65}}
+@media(min-width:1024px) and (max-width:1199px){header .sm\:hidden{display:inline-flex}header .sm\:inline-flex{display:none}}
+
+/* The same furry Enter guides visitors through services, process and contact. */
+.topic-card-layout{display:flex;flex-direction:column;align-items:center;gap:28px;padding:32px 16px}
+.topic-card-copy{display:flex;flex-direction:column;align-items:center;max-width:640px;text-align:center}
+.topic-scene{--topic-mascot-size:clamp(52px,16vw,64px);--topic-spread:234px;--topic-side-inset:17%;max-width:100%;min-width:0;width:352px;height:336px}
+.topic-scene [data-chip]{position:absolute;top:calc(28px + var(--topic-spread) * var(--topic-row));width:max-content;max-width:36%;transform:translate(-50%,-50%);z-index:2}
+.topic-scene [data-side="left"],.topic-scene [data-side="right"]{max-width:28%}
+.topic-scene [data-chip="0"]{--topic-row:0;left:49%}
+.topic-scene [data-chip="1"]{--topic-row:.252;left:71%}
+.topic-scene [data-chip="2"]{--topic-row:.592;left:calc(100% - var(--topic-side-inset))}
+.topic-scene [data-chip="3"]{--topic-row:.929;left:76%}
+.topic-scene [data-chip="5"]{--topic-row:1;left:29%}
+.topic-scene [data-chip="6"]{--topic-row:.668;left:var(--topic-side-inset)}
+.topic-scene [data-chip="4"]{--topic-row:.321;left:27%}
+@media(min-width:768px){
+  .topic-card-layout{gap:32px;padding:44px 32px}
+  .topic-scene{width:min(100%,560px);--topic-spread:300px;--topic-side-inset:15%;height:410px}
+}
+@media(min-width:1024px){
+  .topic-card-copy h3{font-size:36px;line-height:1.12}
+}
+.topic-scene [data-chip] a{display:grid;place-items:center;min-height:44px;padding:5px 7px;border:1px solid #dce5cd;border-radius:24px;background:#fafafa;color:#465536;font:inherit;font-size:12px;line-height:1.2;text-align:center;overflow-wrap:anywhere;box-shadow:0 2px 4px #2f3a1d12;cursor:pointer}
+.topic-scene [data-chip] a:hover,.topic-scene [data-chip] a:focus-visible{background:#eff8da;border-color:#9cbb72;text-decoration:underline;text-underline-offset:2px}
+.topic-scene [data-chip] a:focus-visible{outline:2px solid #577530;outline-offset:2px}
+.topic-mascot{position:absolute;left:calc(50% - var(--topic-mascot-size) / 2);top:calc(28px + (var(--topic-spread) - var(--topic-mascot-size)) / 2);width:var(--topic-mascot-size);height:var(--topic-mascot-size);z-index:1}
+#services-track .gf-root{scroll-margin-top:136px}
+.topic-mascot img,.process-pet img,.contact-pet img{display:block;width:100%;height:100%;object-fit:contain;position:relative;transform-origin:50% 88%}
+.pet-ground{position:absolute;left:24%;bottom:2px;width:52%;height:6px;background:#2f3a1d20;border-radius:50%;filter:blur(3px)}
+.process-pet{position:relative;width:clamp(76px,9vw,128px);height:clamp(76px,9vw,128px)}
+.contact-pet{position:relative;width:88px;height:88px;margin:0 auto 16px}
+.contact-pet{display:block;padding:0;border:0;border-radius:20px;background:transparent;cursor:pointer;touch-action:manipulation}
+.contact-pet .contact-pet-figure{position:relative;display:block;width:100%;height:100%;transform-origin:50% 90%}
+.contact-pet img{position:absolute;inset:0;user-select:none;pointer-events:none}
+.contact-pet .pet-face-laugh{opacity:0}
+.contact-pet:focus{outline:none}
+.contact-pet:focus-visible:not([data-pointer-focus]){background:#eff7e5}
+.contact-pet.is-cuddling .contact-pet-figure{animation:pet-cuddle 1800ms ease-in-out both}
+.contact-pet.is-cuddling .pet-face-laugh{animation:pet-laugh-face 1800ms linear both}
+.contact-pet.is-cuddling .pet-face-normal{animation:pet-normal-face 1800ms linear both}
+.contact-pet.is-cuddling .pet-ground{animation:pet-cuddle-shadow 1800ms ease-in-out both}
+@keyframes pet-cuddle{
+  0%,100%{transform:scale(1) rotate(0)}
+  18%{transform:translateY(2px) scale(1.025,.94) rotate(-1deg)}
+  32%{transform:translateY(-7px) rotate(-2deg)}
+  47%{transform:translateY(1px) scale(1.02,.96)}
+  60%,80%{transform:scale(1)}
+  70%{transform:scale(1.008,.98)}
+}
+@keyframes pet-laugh-face{0%,18%,80%,100%{opacity:0}22%,76%{opacity:1}}
+@keyframes pet-normal-face{0%,18%,80%,100%{opacity:1}22%,76%{opacity:0}}
+@keyframes pet-cuddle-shadow{
+  0%,60%,100%{transform:scaleX(1);opacity:1}
+  32%{transform:scaleX(.88);opacity:.65}
+  47%{transform:scaleX(1.035);opacity:1}
+}
+@media(prefers-reduced-motion:reduce){.contact-pet.is-cuddling .contact-pet-figure{animation:growe-mascot-calm 300ms!important}.contact-pet.is-cuddling img,.contact-pet.is-cuddling .pet-ground{animation:none!important}}
+.pet-motion-toggle{position:absolute;right:12px;top:12px;z-index:3;display:grid;place-items:center;width:32px;height:32px;border:1px solid #2f3a1d20;border-radius:50%;background:#ffffffb8;color:#596946;font:14px/1 Arial,sans-serif;cursor:pointer}
+.pet-motion-toggle:hover{background:#cfff74}.pet-motion-toggle:focus-visible{outline:2px solid #2f3a1d;outline-offset:3px}
+@media(max-width:600px){.process-pet{width:22vw;height:22vw;max-width:96px;max-height:96px}}
+
+/* Three clipped views of the original artwork keep the fur and feet identical. */
+.pet-rig{position:relative;width:100%;height:100%}
+.pet-rig img{position:absolute;inset:0;pointer-events:none}
+.pet-rig .pet-body{z-index:2;clip-path:polygon(0 0,100% 0,100% 100%,78% 100%,78% 80%,56% 83%,56% 100%,44% 100%,44% 84%,22% 84%,22% 100%,0 100%)}
+.topic-mascot .pet-body{clip-path:none}
+.pet-rig .pet-foot-left{clip-path:polygon(21% 82%,45% 82%,45% 100%,21% 100%);transform-origin:33% 84%}
+.pet-rig .pet-foot-right{clip-path:polygon(55% 78%,79% 78%,79% 100%,55% 100%);transform-origin:67% 81%}
+
+.client-mark{position:relative;display:inline-grid;place-items:center;max-width:100%;filter:grayscale(1) brightness(.8);opacity:.84;transition:filter .3s ease,opacity .3s ease}
+.client-logo-ink{position:absolute;inset:0;filter:brightness(0)}
+.client-mark--chata .client-logo-ink{clip-path:inset(66% 0 0)}
+.client-mark--viral{width:200px;grid-template-columns:minmax(0,1fr)}
+.client-mark--viral .client-logo{width:100%;min-width:0}
+.client-mark--viral .client-logo-ink{clip-path:inset(0 0 0 34%)}
+@media(max-width:767px){.client-mark--viral{max-width:min(100%,170px)}}
+@media(hover:hover){.client-mark:hover{filter:none;opacity:1}}
+@media(prefers-reduced-motion:reduce){.client-mark{transition:none}}
+.timeline-mascot{position:absolute;bottom:-6px;left:10%;width:72px;height:72px;z-index:3;pointer-events:none}
+.timeline-mascot img{width:100%;height:100%;object-fit:contain}
+@media(prefers-reduced-motion:reduce){.timeline-mascot{display:none}}
+
+#proc-growe{position:relative}
+.section-alias{position:absolute;top:0}
+
+@media(min-width:1024px){
+  #prace #projects-track .project-card{flex-basis:calc((100% - 44px) / 3)}
+  .hero-opening .hero-begin:not(.hero-brand-identity){max-width:42svh}
+  .hero-opening .hero-booking{max-width:19svh}
+}
+
+.home-theme :is(section[id],.section-alias,#contact-form){
+  scroll-margin-block-start:112px;
+}
+@media(max-width:1023px){
+  html{scroll-padding-block-end:calc(80px + env(safe-area-inset-bottom,0px))}
+  #cenik{padding-block-end:calc(80px + env(safe-area-inset-bottom,0px))}
+}

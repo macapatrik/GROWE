@@ -1,0 +1,42 @@
+/* One raised review stays readable while the neighbouring cards recede. */
+#ohlasy>div{max-width:none;padding-inline:0}
+#ohlasy>div>.text-center{max-width:1024px;margin-inline:auto;padding-inline:24px}
+#ohlasy .quote-grid[data-enhanced]{display:block;position:relative;overflow:hidden;gap:0;padding:50px 0 38px;margin-top:26px;touch-action:pan-y;cursor:grab}
+.testimonial-rail{position:relative;display:flex;align-items:stretch;gap:26px;will-change:transform;transition:transform .85s cubic-bezier(.22,.9,.24,1)}
+.testimonial-slide{display:flex;flex:0 0 min(44vw,560px);min-width:0;opacity:.45;transform:translateY(8px) scale(.92);transition:transform .85s cubic-bezier(.22,.9,.24,1),opacity .85s ease}
+.testimonial-slide.is-active{opacity:1;transform:translateY(-10px) scale(1.035);z-index:1}
+#ohlasy .testimonial-slide .quote-card{width:100%;min-height:350px;margin:0;padding:32px;border-radius:22px;box-shadow:none;user-select:text}
+#ohlasy .testimonial-slide.is-active .quote-card{border-color:#b9d299;box-shadow:0 22px 36px -26px #3046245c}
+#ohlasy .testimonial-slide blockquote{font-size:18px;line-height:1.65;letter-spacing:-.015em;margin:0;color:#3b4931}
+#ohlasy .testimonial-slide .quote-top{margin-bottom:22px}
+#ohlasy .testimonial-slide figcaption{padding-top:20px;margin-top:26px}
+#ohlasy .testimonial-slide figcaption strong{font-size:14px}
+#ohlasy .testimonial-slide figcaption small{font-size:12px}
+.testimonial-controls{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px 22px;padding:0 20px}
+.testimonial-dots{display:flex;align-items:center;gap:4px}
+.testimonial-dots button{display:grid;place-items:center;width:28px;height:44px;padding:0;border:0;background:transparent;cursor:pointer}
+.testimonial-dots button::before{content:"";width:19px;height:6px;border-radius:8px;background:#d8e0cf;transition:background .25s,width .25s}
+.testimonial-dots button[aria-current]::before{width:26px;background:#739d3f}
+.testimonial-buttons{display:flex;align-items:center;gap:8px}
+.testimonial-buttons button{display:grid;place-items:center;width:44px;height:44px;border:1px solid #dce5d1;border-radius:50%;background:#fff;color:#435b30;cursor:pointer;transition:background .2s}
+.testimonial-buttons button:hover{background:#edf7dc}
+.testimonial-buttons svg{display:block;width:18px;height:18px}
+.testimonial-play-icon{display:none}
+[data-testimonial-pause][aria-pressed="true"] .testimonial-pause-icon{display:none}
+[data-testimonial-pause][aria-pressed="true"] .testimonial-play-icon{display:block}
+#ohlasy .quote-grid:focus-visible{outline:2px solid #739d3f;outline-offset:-4px}
+@media(max-width:900px){.testimonial-slide{flex-basis:66vw}}
+@media(max-width:600px){
+ .testimonial-slide{flex-basis:84vw}
+ #ohlasy .quote-grid[data-enhanced]{padding:40px 0 32px;margin-top:20px}
+ #ohlasy .testimonial-slide .quote-card{padding:24px 22px;min-height:360px;border-radius:20px}
+ #ohlasy .testimonial-slide blockquote{font-size:16px;line-height:1.65}
+ #ohlasy .testimonial-slide figcaption{gap:10px}
+ #ohlasy .testimonial-slide figcaption strong{font-size:13px}
+ #ohlasy .testimonial-slide figcaption small{font-size:11px}
+ .testimonial-controls{flex-direction:column;gap:0}
+}
+@media(prefers-reduced-motion:reduce){
+ .testimonial-rail,.testimonial-slide,.testimonial-dots button::before,.testimonial-buttons button{transition:none}
+ .testimonial-slide.is-active{transform:scale(1.02)}
+}

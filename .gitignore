@@ -1,0 +1,12 @@
+node_modules/
+dist/
+releases/
+qa/
+.env
+.env.*
+!.env.example
+!.env.forpsi.example
+.DS_Store
+*.log
+*.bak
+*.gold-backup

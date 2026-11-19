@@ -1,0 +1,12 @@
+Logo assets collected 2026-11-06.
+ledprofes.svg — original SVG supplied by user (ledProfes_logo2019.svg).
+chata-u-dedka.png — original PNG supplied by user (white-logo-e1744902715833.png), white lettering.
+revispol.png — https://revispol.cz/wp-content/uploads/2026/06/revispol-logo.png
+solar-inspekce.svg — standalone export of the HTML header wordmark at https://solar-inspekce.cz/ (Inter 800, original colors, font embedded). Not an original downloadable logo file.
+u-vousatyho-pulitru.svg — standalone export of the header wordmark and inline symbol at https://uvousatyhopulitru.cz/ (Playfair Display 700, original colors, font embedded). Not an original downloadable logo file.
+begin-reselling.svg — https://www.beginreselling.com/images/logo_br_transparent.svg
+viral-vibes.png — https://www.viralvibes.cz/wp-content/uploads/2025/03/cropped-6-e1741528508824.png
+labara.png — https://www.labara.cz/templates/xart_frontend/images/logo/Logo_labara_CZ.png
+aaaled.svg — inline header SVG from https://aaaled.cz/, with original colors and Plus Jakarta Sans font embedded.
+
+viral-vibes-wordmark.png — https://www.viralvibes.cz/wp-content/uploads/2025/03/VV-White-Web.png — full header logo replacing the standalone icon in the client list; CSS preserves the colored symbol and darkens only the white lettering for the light background.

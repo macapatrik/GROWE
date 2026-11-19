@@ -1,0 +1,74 @@
+/* A project selector with the large price and lever from the supplied reference. */
+#cenik.growe-pricing{width:min(calc(100% - 48px),1280px);max-width:1280px;margin:72px auto;padding:0;border:0;background:transparent;scroll-margin-top:110px}
+#cenik .pricing-heading{max-width:740px;margin:0 auto 40px;text-align:center}
+#cenik .pricing-heading h2{font-size:clamp(34px,4.8vw,64px);line-height:1.08;letter-spacing:-.035em;margin:0;text-wrap:balance}
+#cenik .pricing-heading>p{margin:20px 0 0;font-size:17px;line-height:1.7;color:#59664f}
+.pricing-board{padding:30px;border:1px solid #dce3d7;border-radius:28px;background:#fff}
+.pricing-highlight{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);align-items:center;gap:32px;min-height:300px;padding:40px;border-radius:20px;background:#d9f2b5;color:#24301e}
+.pricing-main-price>p{font-size:11px;text-transform:uppercase;letter-spacing:.1em;font-weight:600;color:#4e6538;margin:0 0 20px}
+.pricing-main-price>div{display:flex;align-items:baseline;flex-wrap:wrap;gap:12px}
+.pricing-main-price strong{font-family:"GC Matrix Vol. 2","Helvetica Neue",sans-serif;font-size:clamp(68px,8.5vw,130px);font-weight:600;line-height:1;letter-spacing:-.035em;white-space:nowrap;font-variant-numeric:lining-nums}
+.pricing-main-price>div>span{font-size:20px;color:#4a6634;font-weight:500}
+#cenik .pricing-main-price h3{font-size:16px;margin:22px 0 0;letter-spacing:.015em;line-height:1.4}
+.pricing-summary{display:flex;flex-direction:column;align-items:flex-end;gap:18px;text-align:right}
+.pricing-time-badge{display:inline-flex;align-items:center;min-height:34px;padding:6px 13px;border-radius:999px;background:#edf8dc;color:#48622e;font-size:12px;font-weight:600}
+.pricing-summary>p{margin:0;max-width:34ch;font-size:17px;line-height:1.6;color:#344a27}
+.pricing-confirm{display:flex;align-items:center;gap:8px;font-size:12px;line-height:1.4;color:#48622e}
+.pricing-confirm svg{width:18px;height:18px;flex:none}
+.pricing-switcher{padding:28px 0 32px;border-bottom:1px solid #e1e7db}
+.pricing-switcher label{display:block;font-size:13px;text-align:center;color:#536247;margin-bottom:18px;font-weight:500}
+.pricing-options{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px;margin-bottom:22px}
+.pricing-options button{min-width:0;min-height:70px;padding:10px 7px;border:1px solid transparent;border-radius:10px;background:transparent;color:#68765d;text-align:center;font-size:12px;line-height:1.35;cursor:pointer;transition:color .2s,background .2s}
+.pricing-options button>span{display:block;font-weight:600}
+.pricing-options small{display:block;margin-top:6px;font-size:11px}
+.pricing-options button[aria-pressed="true"]{background:#f0f7e6;border-color:#dbe8c9;color:#304b1e}
+.pricing-options button:hover{color:#304b1e;background:#f5f8f0}
+#pricing-selector{display:block;appearance:none;-webkit-appearance:none;width:100%;height:58px;padding:5px;margin:0;border:0;border-radius:999px;background:#24301e;color:#fff;cursor:ew-resize;touch-action:pan-y}
+#pricing-selector::-webkit-slider-runnable-track{height:48px;border-radius:999px;background:transparent}
+#pricing-selector::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;width:76px;height:48px;border:0;border-radius:999px;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 76 48' fill='none' stroke='%23536148' stroke-width='1.7'%3E%3Cpath d='m29 19-5 5 5 5m18-10 5 5-5 5'/%3E%3C/svg%3E") center/76px 48px no-repeat;box-shadow:0 3px 8px #0002}
+#pricing-selector::-moz-range-track{height:48px;border-radius:999px;background:transparent}
+#pricing-selector::-moz-range-thumb{width:76px;height:48px;border:0;border-radius:999px;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 76 48' fill='none' stroke='%23536148' stroke-width='1.7'%3E%3Cpath d='m29 19-5 5 5 5m18-10 5 5-5 5'/%3E%3C/svg%3E") center/76px 48px no-repeat}
+.pricing-switcher>p{text-align:center;font-size:11px;line-height:1.5;letter-spacing:.03em;color:#738067;margin:14px 0 0}
+.pricing-plan-body{padding:30px 8px 8px}
+.pricing-plan-body h4{margin:0 0 22px;font-size:15px;font-weight:600}
+.pricing-includes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;list-style:none;margin:0;padding:0}
+.pricing-includes li{display:flex;align-items:center;gap:12px;min-width:0;color:#35462a;font-size:15px;line-height:1.5}
+.pricing-includes svg,.pricing-common svg{width:26px;height:26px;flex:none;border-radius:50%;padding:5px;background:#edf7df;color:#567b32}
+.pricing-common{display:flex;justify-content:center;flex-wrap:wrap;gap:14px 30px;border-top:1px solid #e4eadd;margin-top:30px;padding-top:26px}
+.pricing-common>span{display:flex;align-items:center;gap:8px;font-size:12px;line-height:1.4;color:#647357}
+.pricing-common svg{width:20px;height:20px;padding:3px}
+.pricing-action{text-align:center;margin-top:32px}
+#cenik .pricing-start{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:13px 26px;border:0;border-radius:12px;background:#c7ff72;color:#24301e;font-size:14px;font-weight:600;line-height:1.4;cursor:pointer;transition:background .2s,transform .2s}
+#cenik .pricing-start:hover{background:#b7ec64;transform:translateY(-2px)}
+.pricing-action>p{margin:14px 0 0;font-size:12px;line-height:1.6;color:#68765d}
+#cenik>.pricing-note{max-width:100%!important;margin:22px 8px 0;color:#68765d!important;font-size:12px!important;line-height:1.8!important}
+@media(max-width:900px){
+  .pricing-highlight{padding:30px;gap:24px;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .pricing-main-price strong{font-size:clamp(54px,8.7vw,85px)}
+  .pricing-summary>p{font-size:15px}
+  .pricing-board{padding:22px}
+  .pricing-options{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .pricing-includes{grid-template-columns:1fr;gap:16px}
+}
+@media(max-width:600px){
+  #cenik.growe-pricing{width:calc(100% - 32px);margin-block:48px;scroll-margin-top:88px}
+  #cenik .pricing-heading{margin-bottom:28px}
+  #cenik .pricing-heading>p{font-size:15px}
+  .pricing-board{padding:12px;border-radius:20px}
+  .pricing-highlight{grid-template-columns:minmax(0,1fr);padding:24px 20px;gap:26px;border-radius:14px;min-height:0}
+  .pricing-main-price strong{font-size:clamp(54px,14vw,78px)}
+  .pricing-main-price>div{gap:8px}
+  .pricing-main-price>div>span{font-size:17px}
+  .pricing-main-price>p{font-size:10px;margin-bottom:15px}
+  .pricing-summary{align-items:flex-start;text-align:left;gap:14px}
+  .pricing-summary>p{max-width:none;font-size:14px}
+  .pricing-options{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+  .pricing-options button{min-height:72px;font-size:12px}
+  .pricing-switcher{padding:22px 4px}
+  .pricing-switcher label{font-size:12px}
+  .pricing-plan-body{padding:24px 10px 12px}
+  .pricing-includes li{font-size:14px}
+  .pricing-common{align-items:flex-start;flex-direction:column;gap:10px;padding-top:20px;margin-top:24px}
+  #cenik .pricing-start{width:100%;padding-inline:16px}
+}
+@media(prefers-reduced-motion:reduce){.pricing-options button,#cenik .pricing-start{transition:none}}

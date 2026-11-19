@@ -1,0 +1,144 @@
+@font-face {
+  font-family: "GC Matrix Vol. 2";
+  src: url("/assets/gc-matrix-vol2-semibold.woff2?v=2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+
+:root {
+  color: #2f3a1d;
+  background: #fafafa;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  --service-line: #dce4d4;
+  --service-accent: #cfff74;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: inherit; text-underline-offset: .24em; }
+a:focus-visible { outline: 2px solid #526e31; outline-offset: 4px; }
+::selection { color: #2f3a1d; background: var(--service-accent); }
+
+.service-header,
+.service-main,
+.service-footer {
+  width: min(100% - 2 * clamp(16px, 4vw, 44px), 1200px);
+  margin-inline: auto;
+}
+
+.service-header,
+.service-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-block: 16px;
+}
+
+.service-logo,
+.service-main :is(h1,h2,h3,h4,h5,h6) {
+  font-family: "GC Matrix Vol. 2", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.service-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #0b0f19;
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 600;
+  letter-spacing: -.055em;
+  text-decoration: none;
+}
+
+.service-logo img { display: block; object-fit: contain; }
+.service-header-actions, .service-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; }
+.service-header-actions { flex-wrap: nowrap; gap: 8px; }
+.service-lang {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+}
+.service-lang { min-width: 44px; border: 1px solid var(--service-line); }
+.service-lang:hover { background: #edf3e4; }
+
+.service-main { padding-block: clamp(24px, 5vw, 72px) clamp(44px, 7vw, 96px); }
+.service-back, .service-price {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  font-size: 15px;
+}
+.service-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(24px, 6vw, 76px);
+  margin-top: 12px;
+  padding-block: clamp(24px, 5vw, 64px);
+  border-block: 1px solid var(--service-line);
+}
+.service-intro h1 {
+  margin: 0;
+  font: 600 clamp(42px, 6.8vw, 96px)/1.02 "GC Matrix Vol. 2", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: .01em;
+  overflow-wrap: break-word;
+  text-wrap: balance;
+}
+.service-main :is(h1,h2,h3,h4,h5,h6) {
+  letter-spacing: .01em;
+  font-variant-ligatures: none;
+  font-synthesis: none;
+}
+.service-intro p { max-width: 49ch; margin: 20px 0 0; color: #46505e; font-size: clamp(16px, 2vw, 20px); line-height: 1.65; }
+.service-actions { margin-top: 24px; }
+.service-scope { padding: clamp(20px, 3vw, 36px); border: 1px solid var(--service-line); border-radius: 20px; background: #f2f7e9; }
+.service-main h2 { margin: 0 0 16px; font-size: clamp(21px, 3vw, 30px); line-height: 1.2; letter-spacing: .01em; }
+.service-scope ul { margin: 0; padding: 0; list-style: none; }
+.service-scope li { position: relative; padding: 12px 0 12px 24px; }
+.service-scope li + li { border-top: 1px solid var(--service-line); }
+.service-scope li::before {
+  content: "";
+  position: absolute;
+  inset: 19px auto auto 0;
+  width: 10px;
+  height: 6px;
+  border: solid #526e31;
+  border-width: 0 0 2px 2px;
+  transform: rotate(-45deg);
+}
+
+.service-work, .service-related { margin-top: clamp(40px, 6vw, 80px); }
+.service-projects { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr)); gap: 16px; }
+.service-project { min-width: 0; overflow: hidden; border: 1px solid var(--service-line); border-radius: 16px; background: #fff; }
+.service-project img { display: block; width: 100%; aspect-ratio: 1.8; object-fit: cover; object-position: top; background: #f2f7e9; }
+.service-project div { padding: 14px 16px; }
+.service-project :is(h3, p) { margin: 0; }
+.service-project h3 { font-size: 17px; }
+.service-project h3 a span { margin-inline-start: .35em; }
+.service-project p { margin-top: 3px; color: #46505e; font-size: 14px; }
+.service-related ul { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr)); gap: 8px 22px; margin: 0; padding: 0; list-style: none; }
+.service-related a { display: flex; align-items: center; min-height: 44px; border-bottom: 1px solid var(--service-line); }
+.service-footer { flex-wrap: wrap; border-top: 1px solid var(--service-line); color: #46505e; font-size: 14px; }
+.service-next-step { margin-top:48px; padding-block:28px; border-block:1px solid var(--service-line); }
+.service-next-step p { color:#536248; margin:0 0 20px; }
+.service-project h3 a,.service-footer a { display:inline-flex; align-items:center; min-height:44px; }
+
+@media (max-width: 700px) {
+  .service-intro { grid-template-columns: minmax(0, 1fr); }
+  .service-logo img { width: 34px; height: 34px; }
+  .service-header-actions .consultation-cta { font-size: 13px; }
+  .service-actions { align-items:stretch; flex-direction:column; gap:8px; }
+  .service-actions .consultation-cta,.service-next-step .consultation-cta { width:100%; justify-content:center; min-height:50px; }
+  .service-actions .service-price { justify-content:center; }
+  .service-footer { padding-bottom:max(24px,env(safe-area-inset-bottom)); }
+}
+.service-legal { display: flex; flex-wrap: wrap; gap: 4px 20px; width: 100%; }

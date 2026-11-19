@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "web",
+    "englishSlug": "custom-websites",
+    "title": "Weby na míru",
+    "description": "Prezentační weby navrhujeme a stavíme od základu podle toho, co má váš web návštěvníkům říct a co na něm mají udělat.",
+    "scope": ["Návrh webu ve Figmě", "Vývoj na míru", "Redakční systém", "Technické základy SEO"],
+    "projects": ["Labara", "LEDprofes a.s.", "Revispol", "Chata u Dědka", "Viral Vibes"]
+  },
+  {
+    "slug": "eshop",
+    "englishSlug": "online-stores",
+    "title": "E-shopy",
+    "description": "Stavíme e-shopy na míru i na zavedených platformách. Při přechodu ze stávajícího e-shopu pomůžeme s přenosem dat a přesměrováním důležitých adres.",
+    "scope": ["Shopify", "WooCommerce", "E-shop na míru", "Migrace dat a přesměrování"],
+    "projects": ["Begin Reselling", "AAALED E-shop"]
+  },
+  {
+    "slug": "branding",
+    "englishSlug": "branding",
+    "title": "Grafika a branding",
+    "description": "Vytvoříme vizuální identitu, kterou zákazníci poznají na webu, v tisku i na sociálních sítích.",
+    "scope": ["Logo a jeho varianty", "Barvy, typografie a pravidla vizuálního stylu", "Tiskoviny", "Grafické podklady pro sociální sítě"]
+  },
+  {
+    "slug": "aplikace",
+    "englishSlug": "web-apps",
+    "title": "Webové aplikace",
+    "description": "Navrhujeme a vyvíjíme interní nástroje, rezervační systémy i zákaznické portály podle toho, jak je lidé budou používat.",
+    "scope": ["Návrh rozhraní", "Databáze", "Uživatelské účty a oprávnění", "Nasazení aplikace"],
+    "projects": ["Begin Reselling", "Solar Inspekce", "BRKYS’ CRIB"]
+  },
+  {
+    "slug": "marketing",
+    "englishSlug": "marketing",
+    "title": "Marketing a sítě",
+    "description": "Připravíme obsah a kampaně, které přivedou správné lidi na váš web. Domluvíme se, podle čeho poznáme, že propagace funguje.",
+    "scope": ["Správa sociálních sítí", "Plánování a tvorba obsahu", "Reklamní kampaně", "Přehled výsledků"],
+    "projects": ["LEDprofes a.s."]
+  },
+  {
+    "slug": "video",
+    "englishSlug": "photography-and-video",
+    "title": "Video a foto",
+    "description": "Nafotíme vaše produkty nebo natočíme video pro web a sociální sítě. Formát připravíme podle toho, kde obsah použijete.",
+    "scope": ["Produktové fotografie", "Video pro sociální sítě", "Střih a postprodukce", "Letecké záběry z dronu"]
+  },
+  {
+    "slug": "ai-web",
+    "englishSlug": "website-deployment",
+    "title": "Nasazení vašeho webu",
+    "description": "Pomůžeme vám dostat hotový web na vlastní doménu, ať jste ho vytvořili sami nebo s pomocí AI.",
+    "scope": ["Příprava exportu pro vlastní hosting", "Nahrání přes FTP", "Napojení domény", "Závěrečná kontrola a doladění"],
+    "projects": ["U Vousatýho pulitru"]
+  }
+]
