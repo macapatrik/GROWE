@@ -6,6 +6,7 @@ import "./studio-details.css";
 import "./growth-features.css";
 import "./visual-polish.css";
 import "./mobile-experience.css";
+import "./studio-front-page.css";
 
 const root = document.getElementById("root");
 const page = root.firstElementChild.innerHTML;

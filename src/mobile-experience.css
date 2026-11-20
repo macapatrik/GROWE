@@ -1,5 +1,4 @@
-/* Keep the free hero composition; make the next step clear below its canvas. */
-.mobile-project-intro,.mobile-work-action,.project-invitation-copy-mobile{display:none}
+.mobile-work-action,.project-invitation-copy-mobile{display:none}
 #cenik .pricing-quick-start{display:none}
 .enquiry-required-note{font-size:13px;line-height:1.6;color:#536248}
 #contact-form:focus{outline:none}
@@ -8,18 +7,13 @@
   /* Use one anchor offset, rather than adding padding to every section margin. */
   html{scroll-padding-block-start:0}
   .home-theme :is(section[id],.section-alias,#contact-form){scroll-margin-block-start:84px}
-  .home-theme:has(#contact-form :is(input,textarea,select):focus) .growe-mobile-dock{visibility:hidden;pointer-events:none}
+  .growe-mobile-dock[data-contact-overlap]:not(:focus-within),
+  .home-theme:has(#contact-form:focus-within) .growe-mobile-dock{visibility:hidden;pointer-events:none}
 }
 
 @media(max-width:767px){
   .project-invitation :is(.project-invitation-copy-full,.project-invitation-copy-compact){display:none}
   .project-invitation .project-invitation-copy-mobile{display:inline}
-  .mobile-project-intro{display:flex;flex-direction:column;align-items:center;gap:16px;padding:16px 24px 40px;text-align:center}
-  .mobile-project-intro h2{max-width:20ch;margin:0;font-size:32px;line-height:1.15;text-wrap:balance}
-  .mobile-project-intro p{max-width:36ch;margin:0;font-size:16px;line-height:1.65;color:#53604e}
-  .mobile-project-intro .feature-primary{width:100%;max-width:360px;min-height:50px;margin-top:6px;font-size:16px}
-  .mobile-budget-link{display:inline-flex;align-items:center;justify-content:center;min-height:44px;color:#40572e;font-size:15px;text-decoration:underline;text-underline-offset:4px}
-  .mobile-project-intro small{max-width:32ch;color:#59674d;font-size:13px;line-height:1.5}
 
   /* Keep every real client logo, with matching bounds for both ink layers. */
   #reference{padding-block:32px}

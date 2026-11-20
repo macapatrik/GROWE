@@ -88,10 +88,13 @@ function renderDetail(service, english) {
           <a class="service-price" href="${home}#cenik">${t('Orientační rozpočty')}</a>
         </div>
       </div>
-      <section class="service-scope" aria-labelledby="service-scope-title">
-        <h2 id="service-scope-title">${t('Co služba zahrnuje')}</h2>
-        <ul>${service.scope.map(item => `<li>${t(item)}</li>`).join('')}</ul>
-      </section>
+      <div class="service-intro-aside">
+        <img class="service-hero-art" src="/assets/services/${service.slug}.webp" width="768" height="512" alt="" decoding="async">
+        <section class="service-scope" aria-labelledby="service-scope-title">
+          <h2 id="service-scope-title">${t('Co služba zahrnuje')}</h2>
+          <ul>${service.scope.map(item => `<li>${t(item)}</li>`).join('')}</ul>
+        </section>
+      </div>
     </div>
     ${gallery ? `<section class="service-work">
       <h2>${t('Vybrané projekty')}</h2>

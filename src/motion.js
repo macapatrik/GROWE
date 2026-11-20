@@ -62,22 +62,17 @@ export function setupMotion(root, reduced, options, language) {
     });
   }
 
-  // Native observers trigger the same folder assembly and staggered reveals on entry.
+  // Reveal content as it enters the viewport.
   const observer = new IntersectionObserver(entries => {
     entries.forEach(({ target, isIntersecting }) => {
       if (!isIntersecting) return;
-      if (target.matches('.gf-root')) target.dataset.entered = 'true';
-      else if (target.matches('.audience-panel')) revealPanel(target);
+      if (target.matches('.audience-panel')) revealPanel(target);
       else animate(target, [{ opacity: 0, filter: 'blur(6px)', transform: 'translateY(12px)' },
         { opacity: 1, filter: 'blur(0)', transform: 'translateY(0)' }],
       { duration: 600, delay: Number(target.dataset.delay || 0), easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' });
       observer.unobserve(target);
     });
   }, { threshold: 0.12 });
-  root.querySelectorAll('.gf-root').forEach(folder => {
-    if (reduced) folder.dataset.entered = 'true';
-    else { folder.removeAttribute('data-entered'); observer.observe(folder); }
-  });
   root.querySelectorAll('.audience-panel').forEach(panel => observer.observe(panel));
   const faqTitle = root.querySelector('#faq-title');
   const faqText = faqTitle.textContent;

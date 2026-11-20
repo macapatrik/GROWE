@@ -42,5 +42,4 @@
   .nimbus-nav .nimbus-drop, .motion-panel, #postup .st-stem, #postup .st-dot, #postup [data-title], #postup [data-text] { transition: none; }
   #postup [data-title], #postup [data-text] { opacity: 1; clip-path: none; translate: none; }
   .motion-glint, .motion-particles i { animation: none !important; }
-  .gf-tilt, .gf-art { transform: none; }
 }

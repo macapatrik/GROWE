@@ -57,13 +57,11 @@
   transition:opacity .24s ease;
 }
 .hero-opening:not([data-design-guides])::before{opacity:0}
-.hero-studio-label{position:absolute;top:max(84px,12svh);inset-inline:20px;text-align:center;font-size:12px;line-height:1.5;letter-spacing:.02em;color:#596052;z-index:4}
 .hero-pause{position:absolute;right:20px;bottom:max(88px,env(safe-area-inset-bottom));z-index:5;display:grid;place-items:center;width:44px;height:44px;border:1px solid #dce1d7;border-radius:50%;background:#fff;color:#526044;cursor:pointer}
 .hero-pause[hidden],.hero-pause-play{display:none}
 .hero-pause svg{width:18px;height:18px}
 .hero-pause[aria-pressed="true"] .hero-pause-bars{display:none}
 .hero-pause[aria-pressed="true"] .hero-pause-play{display:block}
-@media(min-width:768px){.hero-studio-label{inset-inline:6vw auto;text-align:left}}
 @media(min-width:1024px){.hero-pause{bottom:24px}}
 .hero-workspace,.hero-scene,.hero-workspace-tools{position:absolute;inset:0;pointer-events:none}
 .hero-workspace-tools{z-index:3}
@@ -154,7 +152,12 @@
 }
 .hero-project-frame img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:left top;border-radius:6px}
 .hero-begin{--x:8%;--y:63%;--width:clamp(250px,26vw,640px);--angle:-4deg;--from-x:-45%;--from-y:22%;--delay:.72s}
-.hero-wireframe{--x:10.4%;--y:34%;--width:15.5vw;--angle:5.5deg;--from-x:-8%;--from-y:10%;--delay:.18s}
+.hero-service-preview{
+  --x:13%;--y:31%;--width:clamp(175px,21vw,440px);--angle:5.5deg;--from-x:-8%;--from-y:10%;--delay:.18s;
+  border:1px solid #dde7d3;
+  border-radius:clamp(10px,1.4vw,22px);
+  box-shadow:0 18px 34px -20px #2b3e2180;
+}
 .hero-chat{--x:33.2%;--y:73%;--width:15.5vw;--angle:5.5deg;--from-x:-6%;--from-y:10%;--delay:.36s}
 .hero-code{--x:80.8%;--y:74%;--width:15.5vw;--angle:-5.5deg;--from-x:5%;--from-y:10%;--delay:.53s}
 .hero-tool{
@@ -290,7 +293,7 @@
   .hero-brand-preview{--x:78%;--y:33%;--width:49vw}
   .hero-brand-identity{--x:21%;--y:62%;--width:34vw}
   .hero-solar{--x:19%;--y:64%;--width:46vw}
-  .hero-wireframe{--x:11%;--y:32%;--width:26vw}
+  .hero-service-preview{--x:15%;--y:30%;--width:36vw}
   .hero-chat{--x:39%;--y:76%;--width:27vw}
   .hero-code{--x:70%;--y:75%;--width:23vw}
   .hero-comment{--width:44vw;font-size:10px}
@@ -346,23 +349,6 @@
 #projects-track .project-info{padding:22px 12px 10px}
 #projects-track .project-detail-link{margin:0 12px 12px;font-size:12px;text-decoration-thickness:1px}
 #projects-track .project-card{transition:transform .3s var(--growe-ease),border-color .3s}
-
-/* Service folders link directly to their details. */
-#reseni .gf-back{border-radius:0 0 24px 24px}
-#reseni .gf-front{left:0;right:0;bottom:0;width:100%;height:auto;box-sizing:border-box;transform:none;border-radius:24px;overflow:hidden}
-#reseni .gf-front :is(.gf-tint,.gf-spec){border-radius:inherit}
-#reseni .gf-shadow{left:22px;right:22px;bottom:-4px;height:48px;border-radius:50%;background:#202b2429;filter:blur(20px)}
-#reseni .gf-hit{border-radius:inherit}
-#reseni .gf-hit:focus-visible{outline-offset:-4px}
-#reseni .gf-hit .gf-title{text-decoration:none}
-#reseni .gf-tilt{transform:none;transform-origin:50% 80%;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
-#reseni .gf-root:has(.gf-hit:focus-visible) .gf-tilt{transform:scale(1.04) rotate(-2deg)}
-@media(hover:hover) and (pointer:fine){
-  #reseni .gf-root:hover .gf-tilt{transform:scale(1.04) rotate(-2deg)}
-}
-@media(prefers-reduced-motion:reduce){
-  #reseni .gf-root .gf-tilt{transform:none;transition:none}
-}
 
 /* Small entry offers sit together; core services keep room for comparison. */
 .growe-pricing{max-width:1152px;padding-top:56px;padding-bottom:56px}

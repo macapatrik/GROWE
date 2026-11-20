@@ -52,33 +52,6 @@ export function App({ page, language }) {
     contactMascot.querySelector('.contact-pet-figure').addEventListener('animationend', event => {
       if (event.target.matches('.contact-pet-figure')) contactMascot.classList.remove('is-cuddling');
     }, options);
-    const track = root.querySelector('#services-track');
-    const arrows = root.querySelectorAll('#reseni > div:nth-child(2) button');
-    const refreshArrows = () => {
-      arrows[0].disabled = track.scrollLeft < 5;
-      arrows[1].disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 5;
-    };
-    track.addEventListener('scroll', refreshArrows, options);
-    arrows.forEach((button, i) => button.addEventListener('click', () => {
-      track.scrollBy({ left: (i ? 1 : -1) * 340, behavior: reduced ? 'instant' : 'smooth' });
-    }, options));
-    refreshArrows();
-    let drag = null;
-    track.addEventListener('pointerdown', e => {
-      if (e.pointerType !== 'mouse' || e.target.closest('button,a')) return;
-      drag = { x: e.clientX, left: track.scrollLeft };
-      track.style.scrollSnapType = 'none';
-      track.setPointerCapture(e.pointerId);
-    }, options);
-    track.addEventListener('pointermove', e => {
-      if (!drag) return;
-      track.scrollLeft = drag.left - (e.clientX - drag.x);
-    }, options);
-    const endDrag = () => { drag = null; track.style.removeProperty('scroll-snap-type'); };
-    track.addEventListener('pointerup', endDrag, options);
-    track.addEventListener('pointercancel', endDrag, options);
-    track.addEventListener('lostpointercapture', endDrag, options);
-
     function setPanel(button, open) {
       const panel = document.getElementById(button.getAttribute('aria-controls'));
       if (!panel) return;
@@ -105,25 +78,32 @@ export function App({ page, language }) {
     });
 
     const navLinks = [...root.querySelectorAll('.nimbus-item')];
-    const sections = [...root.querySelector('.nimbus-nav').querySelectorAll('.nimbus-item')]
-      .map(link => root.querySelector(link.hash));
+    const navTargets = new Set(navLinks.map(link => link.hash.slice(1)));
+    const featuredWork = 'vybrane-realizace';
+    const sections = [...root.querySelectorAll('section[id]')]
+      .filter(section => navTargets.has(section.id) || section.id === 'prace');
+    const dock = root.querySelector('.growe-mobile-dock');
+    const form = root.querySelector('#contact-form');
     let frame;
     function update() {
       let id = 'top';
       for (const sec of sections) {
         if (sec.getBoundingClientRect().top < window.innerHeight * .4) id = sec.id;
       }
+      const activeTarget = id === 'prace' ? featuredWork : id;
       navLinks.forEach(a => {
-        if (a.hash === '#' + id) a.setAttribute('aria-current', 'page');
+        if (a.hash === '#' + activeTarget) a.setAttribute('aria-current', 'page');
         else a.removeAttribute('aria-current');
       });
+      const formBounds = form.getBoundingClientRect();
+      const dockTop = dock.getBoundingClientRect().top;
+      dock.toggleAttribute('data-contact-overlap', formBounds.top < window.innerHeight && formBounds.bottom > dockTop);
       motion.updateNavigation();
     }
     function schedule() { cancelAnimationFrame(frame); frame = requestAnimationFrame(update); }
     window.addEventListener('scroll', schedule, { ...options, passive:true });
-    window.addEventListener('resize', () => { schedule(); refreshArrows(); }, options);
+    window.addEventListener('resize', schedule, options);
     update();
-    const form = root.querySelector('#contact-form');
     const contactEndpoint = import.meta.env.VITE_CONTACT_ENDPOINT || '/contact.php';
     form.querySelector('button[type=submit]').textContent = contact.submit;
     root.querySelector('#form-status').textContent = contact.responseTime;

@@ -70,7 +70,7 @@ test('English has its own prerendered page and both languages link to each other
   const english = readFileSync(new URL('dist/client/en/index.html', root), 'utf8');
   assert.match(english, /<html lang="en">/);
   assert.match(english, /rel="canonical" href="https:\/\/www.growe.cz\/en\/"/);
-  assert.match(english, /Websites and design that help you grow/);
+  assert.match(english, /We design and build websites, online stores and brands/);
   assert.match(english, /class="language-switch" href="\/" lang="cs"/);
   assert.match(html, /class="language-switch" href="\/en\/" lang="en"/);
   for (const id of ['reseni', 'prace', 'konzultace']) {
@@ -109,10 +109,10 @@ test('every service link opens a localised detail included in the build and site
   const sitemap = readFileSync(new URL('dist/client/sitemap.xml', root), 'utf8');
   for (const [home, lang, prefix] of [['/', 'cs', '/sluzby/'], ['/en/', 'en', '/en/services/']]) {
     const homepage = readFileSync(new URL(`dist/client${home}index.html`, root), 'utf8');
-    const cards = [...homepage.matchAll(/class="gf-hit" href="([^"]+)"/g)].map(match => match[1]);
+    const cards = [...homepage.matchAll(/class="studio-service-link" href="([^"]+)"/g)].map(match => match[1]);
     const internalLinks = [...homepage.matchAll(/href="(\/(?:en\/services|sluzby)\/[^"]+)"/g)].map(match => match[1]);
     assert.equal(new Set(cards).size, 7);
-    assert.equal(internalLinks.length, 22);
+    assert.equal(internalLinks.length, 15);
     assert.ok(internalLinks.every(path => cards.includes(path)));
     assert.doesNotMatch(homepage, /href="https:\/\/www\.growe\.cz\/sluzby\//);
     for (const route of cards) {
@@ -124,7 +124,7 @@ test('every service link opens a localised detail included in the build and site
       assert.match(detail, /id="service-scope-title"/);
       const [, slug] = detail.match(/\?sluzba=([^#]+)#konzultace/);
       assert.ok(homepage.includes(`data-service-slug="${slug}"`));
-      for (const [, asset] of detail.matchAll(/<img src="(\/[^"]+)"/g)) {
+      for (const [, asset] of detail.matchAll(/<img\b[^>]*\bsrc="(\/[^"]+)"/g)) {
         assert.ok(existsSync(new URL('dist/client' + asset, root)), asset);
       }
     }
@@ -136,9 +136,9 @@ test('desktop and mobile menu links follow section order in both languages', () 
   for (const document of [html, english]) {
     const menus = [...document.matchAll(/<nav aria-label="(?:Hlavní navigace|Main navigation)"[\s\S]*?<\/nav>/g)];
     assert.equal(menus.length, 2);
-    for (const [menu] of menus) {
+    for (const [index, [menu]] of menus.entries()) {
       const targets = [...menu.matchAll(/<a\b[^>]*class="nimbus-item"[^>]*href="#([^"]+)"/g)].map(match => match[1]);
-      assert.equal(targets.length, 6);
+      assert.equal(targets.length, index === 0 ? 6 : 4);
       const positions = targets.map(id => document.indexOf(`id="${id}"`));
       assert.ok(positions.every(position => position >= 0));
       assert.deepEqual(positions, [...positions].sort((a, b) => a - b));

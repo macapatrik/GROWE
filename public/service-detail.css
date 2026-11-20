@@ -142,3 +142,18 @@ a:focus-visible { outline: 2px solid #526e31; outline-offset: 4px; }
   .service-footer { padding-bottom:max(24px,env(safe-area-inset-bottom)); }
 }
 .service-legal { display: flex; flex-wrap: wrap; gap: 4px 20px; width: 100%; }
+
+.service-intro-aside {
+  display: grid;
+  gap: 16px;
+  min-width: 0;
+}
+
+.service-hero-art {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--service-line);
+  border-radius: 20px;
+  background: #f7f8f3;
+}
